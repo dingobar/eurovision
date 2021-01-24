@@ -44,7 +44,14 @@ class DataCleanUpService:
         for ti in trackinfo:
             ti = ti.get("message", {}).get("body", {})
             if not ti:
-                flatlists.append(None)
+                flatlists.append({
+                    "albumName": None,
+                    "trackName": None,
+                    "trackRatingMusixmatch": None,
+                    "instrumental": None,
+                    "explicit": None,
+                    "genres": []
+                })
                 continue
             ti = ti.get("track")
             selected = {

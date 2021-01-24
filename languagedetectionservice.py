@@ -13,7 +13,7 @@ class LanguageDetectionService:
         # will return a sequence of results for each text.
         results = []
         for text in texts:
-            text = text[0:min(len(text), 1000)]
+            text = text[0 : min(len(text), 1000)]
             results.append(translate_client.detect_language(text).get("language"))
 
         return results

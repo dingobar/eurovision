@@ -27,7 +27,8 @@ def run():
     countries = dataService.all_countries
     country_info = countryService.get_country_info(countries)
     countrytable = DataCleanUpService.make_country_information_table(
-        dataService.all_countries, country_info)
+        dataService.all_countries, country_info
+    )
 
     # COMBINE
     df = (
