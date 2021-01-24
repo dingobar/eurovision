@@ -44,7 +44,7 @@ class DataCleanUpService:
         for ti in trackinfo:
             ti = ti.get("message", {}).get("body", {})
             if not ti:
-                flatlists += None
+                flatlists.append(None)
                 continue
             ti = ti.get("track")
             selected = {
